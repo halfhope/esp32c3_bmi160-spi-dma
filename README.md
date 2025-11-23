@@ -11,8 +11,14 @@ The code includes:
 - **FOC (Fast Offset Calibration)** for precise accelerometer calibration
 - Manual bias calibration for accelerometer and gyroscope
 - Two FreeRTOS tasks:
-  - `sensor_task` — streaming raw data via UART
-  - `perf_task` — printing task runtime stats every 5 seconds
+  - `sensor_task` - streaming raw data via UART
+  - `perf_task` - printing task runtime stats every 5 seconds
+
+## Notes
+
+I recommend using a different sensor. If you plan to use the IMU for spatial orientation, the BMI160 gradually accumulates drift over time, and the data becomes unreliable.  
+
+I suggest switching to another IMU that has an additional data source - a magnetometer. For example, the ICM-20948 (note: it requires a 3.3V–5V logic level converter).
 
 ## Pin Configuration
 | Function      | GPIO |
