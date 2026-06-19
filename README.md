@@ -19,6 +19,7 @@ The code includes:
 I recommend using a different sensor. If you plan to use the IMU for spatial orientation, the BMI160 gradually accumulates drift over time, and the data becomes unreliable.  
 
 I suggest switching to another IMU that has an additional data source - a magnetometer. For example, the ICM-20948 (note: it requires a 3.3V–5V logic level converter).
+**UPD: Internal ICM-20948 FPGA controller has broken firmware, it not works correctly in DMA mode.**
 
 ## Pin Configuration
 | Function      | GPIO |
